@@ -1,9 +1,11 @@
+import React from "react";
 import "./Assets/Sass/_global.scss";
 import "aos/dist/aos.css";
 import HeroComponent from "./Components/Hero";
 import Features from "./Components/Features";
 import Illustration1 from "./Assets/Images/illustration1.svg";
 import Illustration2 from "./Assets/Images/illustration2.svg";
+import FAQ from "./Components/FAQ";
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
           positionText="right"
           img={Illustration2}
         />
+        <FAQ />
       </div>
     </div>
   );

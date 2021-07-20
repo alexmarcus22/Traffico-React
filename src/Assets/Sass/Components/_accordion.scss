@@ -1,0 +1,19 @@
+.accordion-component {
+  position: relative;
+  cursor: pointer;
+  height: 100%;
+  border: 0;
+
+  .accordion-button {
+    font-size: 2rem;
+    transition: 1s ease all;
+    user-select: none;
+    max-height: 10rem;
+  }
+
+  .accordion-item {
+    border: 0;
+    border-radius: 1rem;
+    max-height: 100%;
+  }
+}

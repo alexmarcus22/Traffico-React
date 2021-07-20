@@ -1,0 +1,75 @@
+.faq-component {
+  position: relative;
+  padding-bottom: 10rem;
+  padding-top: 23rem;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../../../Assets/Images/faq-bg.svg");
+    background-position-x: 70%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+  }
+
+  .faq-container {
+    position: relative;
+    left: -10rem;
+
+    @media screen and (max-width: 991px) {
+      left: 0;
+      padding-top: 5rem;
+    }
+    .content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      .subtitle {
+        margin-bottom: 4.4rem;
+      }
+      .description {
+        font-family: DM Serif Display;
+        font-size: 4.8rem;
+        max-width: 55rem;
+        line-height: 140%;
+      }
+    }
+
+    &.accordions {
+      margin-top: 5rem;
+    }
+
+    .image {
+      position: relative;
+      left: 20rem;
+      @media screen and (max-width: 767px) {
+        left: 0;
+        padding-top: 5rem;
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .load-more {
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+
+    @media screen and (max-width: 767px) {
+      & > .col-12 {
+        .accordion-component {
+          margin-bottom: 1.6rem;
+        }
+      }
+    }
+  }
+}

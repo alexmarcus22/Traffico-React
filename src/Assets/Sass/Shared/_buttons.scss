@@ -150,12 +150,4 @@
 .accordion-button {
   box-shadow: 0px 20px 40px rgba($accent, 0.1) !important;
   padding: 3rem;
-
-  &::before {
-    float: right;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f067";
-    font-size: 2rem;
-  }
 }
