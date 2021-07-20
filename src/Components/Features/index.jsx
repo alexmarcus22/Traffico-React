@@ -14,8 +14,8 @@ const Features = (props) => {
             <h2 className="subtitle">{titlu}</h2>
             <p className="description">{description}</p>
             {!body ? null : (
-              <div class="card card-component">
-                <div class="card-body">{body}</div>
+              <div className="card card-component">
+                <div className="card-body">{body}</div>
               </div>
             )}
           </div>
