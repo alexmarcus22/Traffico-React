@@ -1,0 +1,152 @@
+.footer-component {
+  position: relative;
+  height: 500px;
+  margin-top: 18rem;
+  z-index: 1000;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 6rem;
+  }
+
+  .footer-clipped {
+    max-width: 90%;
+    min-height: 70rem;
+    background: #0f264c;
+    background-size: cover;
+    clip-path: url(#clipPathFooter);
+    position: absolute;
+    top: 0;
+    border: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    @media screen and (max-width: 767px) {
+      width: auto;
+      max-width: unset;
+      left: -153rem;
+      min-height: 118rem;
+    }
+  }
+
+  #secondMobile {
+    position: absolute;
+    top: -14rem;
+    z-index: 2;
+
+    @media screen and (max-width: 767px) {
+      top: -10rem;
+      width: 50%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  #footerSVG {
+    position: absolute;
+    top: 0;
+    left: 18rem;
+    top: -5rem;
+    z-index: 1;
+
+    @media screen and (max-width: 767px) {
+      left: 2rem;
+    }
+  }
+
+  #footerSVG2 {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+
+    @media screen and (max-width: 767px) {
+      max-width: 11rem;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .line-svg {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    width: 103rem;
+
+    img {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 1200px) {
+      width: 90rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100vw;
+      top: 100%;
+    }
+  }
+
+  .footer-container {
+    position: relative;
+    z-index: 1000;
+
+    .list-inline {
+      display: flex;
+      justify-content: flex-end;
+      &-item {
+        color: $white;
+        font-size: 1.6rem;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-align: center;
+        align-self: center;
+        padding: 1.3rem 0rem 1.3rem 5rem;
+        &:not(:last-of-type) {
+          padding: 1.3rem 5rem;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        &-item {
+          padding: 1.2rem 0 !important;
+          font-size: 1.9rem;
+        }
+      }
+    }
+
+    &.footer-links {
+      margin-bottom: 12rem;
+      @media screen and (max-width: 767px) {
+        text-align: center;
+        margin-bottom: 10rem;
+        a {
+          margin-bottom: 1.4rem;
+          text-align: center;
+        }
+      }
+    }
+
+    &.footer-copyright {
+      margin-bottom: 2.4rem;
+      .copyright {
+        color: $black;
+        font-size: 1.6rem;
+      }
+
+      .social-links {
+        & > li {
+          padding: 0 0 0 1.6rem;
+
+          &:not(:last-of-type) {
+            padding: 0 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}

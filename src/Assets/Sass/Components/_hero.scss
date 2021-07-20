@@ -1,0 +1,54 @@
+.hero-component {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: auto;
+  background-image: url("../../../Assets/Images/hero.svg");
+  position: relative;
+  width: auto;
+  height: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: 767px) {
+    background-size: 250vw;
+    background-position-x: -30rem;
+  }
+  @media screen and (min-width: 991px) {
+    background-size: 100vw;
+  }
+
+  .navigation-component {
+    padding-top: 5.4rem;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1147px) {
+      padding-top: 0.4rem;
+    }
+  }
+
+  .hero-container {
+    margin-bottom: 18rem;
+    .title {
+      margin-bottom: 7rem;
+
+      @media screen and (max-width: 767px) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  .mobile {
+    @media screen and (max-width: 767px) {
+      max-width: 25rem;
+      top: -6rem;
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
