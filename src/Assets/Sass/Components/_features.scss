@@ -1,0 +1,40 @@
+.features-component {
+  position: relative;
+  padding: 11rem;
+
+  @media screen and (max-width: 767px) {
+    padding: 0;
+    margin-bottom: 6.2rem;
+  }
+
+  .content {
+    padding-top: 6rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .subtitle {
+      margin-bottom: 4rem;
+    }
+
+    .description {
+      font-weight: 100;
+      font-size: 1.8rem;
+      line-height: 4rem;
+      max-width: 47rem;
+      margin-bottom: 7rem;
+      color: $text;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 0;
+    .image {
+      width: 100%;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

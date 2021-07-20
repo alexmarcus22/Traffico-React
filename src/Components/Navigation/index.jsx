@@ -8,8 +8,7 @@ const NavigationComponent = () => {
       <a className="navbar-brand mr-auto" href="#test">
         <img src={logo} alt="Logo" />
       </a>
-      <div className="collapse navbar-collapse" id="navbarResponsive">
-        <div className="sidebar-backdrop" v-if="isPanelOpen"></div>
+      <div className="collapse navbar-collapse">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
             <a className="nav-link active" aria-current="page" href="#about">
