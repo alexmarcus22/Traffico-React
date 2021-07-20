@@ -1,0 +1,32 @@
+.navigation-component {
+  margin-bottom: 10rem;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 3.2rem;
+  }
+
+  .navbar {
+    &-collapse {
+      flex-grow: 0;
+    }
+
+    &-nav {
+      align-items: center;
+      .nav-item:not(:last-of-type) {
+        padding: 0 4.8rem;
+      }
+      .nav-item:last-of-type {
+        padding: 0 3.8rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .navbar-brand {
+      img {
+        height: 5rem;
+        width: 18rem;
+      }
+    }
+  }
+}
