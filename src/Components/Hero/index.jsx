@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavigationComponent from "../Navigation";
+import AOS from "aos";
+import carImg from "../../Assets/Images/car.svg";
 
 const HeroComponent = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
   return (
     <section className="hero-component">
       <div className="container">
@@ -13,9 +20,9 @@ const HeroComponent = () => {
           </div>
         </div>
       </div>
-      {/* <div className="mobile" data-aos="fade-right" data-aos-offset="0">
-        <img alt="" srcset="" />
-      </div> */}
+      <div className="mobile" data-aos="fade-right" data-aos-offset="0">
+        <img alt="" src={carImg} />
+      </div>
     </section>
   );
 };
