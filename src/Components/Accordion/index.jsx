@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 
 const AccordionComponent = (props) => {
   const { title, description, target, id } = props;
-  const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className="col-12 col-md-6 accordion accordion-component" id="accordionExample">
+    <div
+      className="col-12 col-md-6 accordion accordion-component"
+      id="accordionExample"
+    >
       <div className="accordion-item">
         <h2 className="accordion-header" id={id}>
           <button
@@ -25,7 +27,9 @@ const AccordionComponent = (props) => {
           aria-labelledby={id}
           data-bs-parent="#accordionExample"
         >
-          <div className="accordion-body">{description}</div>
+          <div className="accordion-body card card-body card-collapse">
+            {description}
+          </div>
         </div>
       </div>
     </div>

@@ -3,9 +3,10 @@ import FAQ_header from "../../Assets/Images/faq.svg";
 import { getData } from "../../Config/api";
 import AccordionComponent from "../Accordion";
 
-const FAQ = () => {
+const FAQ = ({ id }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [limit, setLimit] = useState(0);
 
   const fetchData = () => {
     setLoading(true);
@@ -13,8 +14,11 @@ const FAQ = () => {
       const response = await getData();
       setData(response);
       setLoading(false);
+      setLimit(4);
     }, 300);
   };
+
+  const raiseLimit = () => setLimit(limit + 2);
 
   useEffect(() => {
     fetchData();
@@ -31,7 +35,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="faq-component" id="faq">
+    <section className="faq-component" id={id}>
       <div className="container">
         <div className="faq-container row">
           <div className="col-12 col-xl-4 content" data-aos="dataText">
@@ -39,7 +43,6 @@ const FAQ = () => {
             <p className="description">
               Questions and Answers on Professional Traffic Permits:
             </p>
-            <slot name="cardBody"></slot>
           </div>
           <div className="col-12 col-xl-8 image" data-aos="dataImg">
             <img src={FAQ_header} alt="2" />
@@ -51,22 +54,27 @@ const FAQ = () => {
           {loading
             ? null
             : data.map((item, index) => {
-                return (
-                  <AccordionComponent
-                    title={item.title}
-                    description={item.Message}
-                    key={index}
-                    target={makeid(5)}
-                    id={index}
-                  />
-                );
+                if (index < limit)
+                  return (
+                    <AccordionComponent
+                      title={item.title}
+                      description={item.Message}
+                      key={index}
+                      target={makeid(5)}
+                      id={index}
+                    />
+                  );
+                return null;
               })}
         </div>
         <div className="row faq-container">
           <div className="col-md-6 offset-md-6">
             <div className="load-more">
-              <button className="btn secondary-button accordion-button">
-                Load More
+              <button
+                className="btn secondary-button accordion-button"
+                onClick={raiseLimit}
+              >
+                <div className="accordion-title">Load More</div>
               </button>
             </div>
           </div>

@@ -3,6 +3,8 @@
     .card-component {
       background: transparent;
       max-width: 40rem;
+      margin-top: 15rem;
+
       @media screen and (max-width: 767px) {
         margin-bottom: 6.4rem;
       }
@@ -19,11 +21,12 @@
     .card-contact {
       box-shadow: 0px 20px 40px rgba($accent, 0.1);
       position: relative;
-      top: -25rem;
-      max-width: unset;
+      top: -15rem;
+      max-width: 80%;
 
       @media screen and (max-width: 767px) {
         top: 0;
+        max-width: 100%;
         margin-bottom: 3.2rem;
       }
     }

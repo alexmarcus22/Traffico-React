@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import NavigationComponent from "../Navigation";
 import AOS from "aos";
 import carImg from "../../Assets/Images/car.svg";
+import Arrow from "../../Assets/Images/union.svg";
 
 const HeroComponent = () => {
   useEffect(() => {
@@ -10,13 +11,16 @@ const HeroComponent = () => {
     });
   }, []);
   return (
-    <section className="hero-component">
+    <section className="hero-component" id="home">
       <div className="container">
         <div className="row">
           <NavigationComponent />
           <div className="hero-container col-12 col-md-7">
             <h1 className="title">Your awesome traffic permit consultant.</h1>
-            <button className="btn primary-button">Get Started</button>
+            <button className="btn primary-button">
+              Get Started
+              <img src={Arrow} alt="arrow" />
+            </button>
           </div>
         </div>
       </div>

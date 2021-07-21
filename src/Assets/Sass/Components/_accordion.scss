@@ -9,6 +9,35 @@
     transition: 1s ease all;
     user-select: none;
     max-height: 10rem;
+    border-radius: 1rem !important;
+    font-weight: 500;
+    color: $text;
+    z-index: 100;
+
+    @media screen and (max-width: 991px) {
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+
+    &::after {
+      background-image: url("../../Images/+.svg");
+      width: 2rem;
+      height: 2rem;
+      background-size: cover;
+    }
+
+    &:not(.collapsed) {
+      &:after {
+        background-image: url("../../Images/-.svg");
+      }
+
+      background-color: $white;
+    }
+
+    &:focus {
+      background-color: $white;
+      color: $text;
+    }
   }
 
   .accordion-item {

@@ -1,9 +1,9 @@
 import React from "react";
 
 const Features = (props) => {
-  const { titlu, description, body, img, positionText } = props;
+  const { titlu, description, body, img, positionText, id } = props;
   return (
-    <section className="features-component">
+    <section className="features-component" id={id}>
       <div className="container">
         <div
           className={
