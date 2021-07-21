@@ -28,5 +28,25 @@
         width: 18rem;
       }
     }
+
+    .navbar-nav {
+      .nav-item {
+        width: 100%;
+        padding: 0;
+        text-align: right;
+
+        &:not(:last-of-type) {
+          padding: 0 0.4rem;
+        }
+        &:last-of-type {
+          padding: 0 0.4rem;
+        }
+      }
+    }
+
+    .collapse,
+    .collapsing {
+      width: 100%;
+    }
   }
 }

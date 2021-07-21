@@ -26,6 +26,7 @@
       max-width: unset;
       left: -153rem;
       min-height: 118rem;
+      top: 15rem;
     }
   }
 
@@ -40,6 +41,8 @@
 
       img {
         width: 100%;
+        top: 7rem;
+        position: relative;
       }
     }
   }
@@ -53,6 +56,12 @@
 
     @media screen and (max-width: 767px) {
       left: 2rem;
+
+      img {
+        width: 100%;
+        top: 7rem;
+        position: relative;
+      }
     }
   }
 
@@ -66,6 +75,8 @@
 
       img {
         width: 100%;
+        top: 7rem;
+        position: relative;
       }
     }
   }
